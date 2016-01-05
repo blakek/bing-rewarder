@@ -13,16 +13,23 @@ commander
   .option('-w, --wait [value]', 'milliseconds to wait between requests')
   .parse(process.argv)
 
-function cleanSearchItems(text) {
-  return text
+/* Clean a string to be used for Bing searches
+ */
+function prepareSearchString(string) {
+  return string
     .replace(/\s+/g, ' ')
     .replace(/ /g, '+')
 }
 
-function getRandomFromArray(array) {
   return array[Math.floor(Math.random() * array.length)]
+/* Get "length" number of elements from an array without picking the same
+ * element twice
+ */
+function getRandomFromArray(array, length) {
 }
 
+/* Get stuff to search for depending on the methods specified
+ */
 function getSearchArray(callback) {
   if (commander.google) {
     googleNewsApi.getResults(commander.google, (err, results) => {
@@ -40,7 +47,7 @@ getSearchArray((searchTerms) => {
     if (commander.dryRun) {
       console.log(`Searching for "${term}"`)
     } else {
-      var searchText = cleanSearchItems(term)
+      var searchText = prepareSearchString(term)
       exec(`open https://www.bing.com/search?q=${searchText}`)
     }
   }
