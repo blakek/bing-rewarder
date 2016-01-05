@@ -1,0 +1,59 @@
+open source software
+javascript
+ubuntu
+linux mint
+debian
+fedora
+arch linux
+linux
+terminal themes
+desktop environment
+libreoffice
+openoffice
+gnu software
+vmware
+computer kernel
+mozilla firefox
+google chrome
+apple safari
+webkit
+raspberry pi
+mongodb
+maria db
+mysql
+os x homebrew
+sqlite
+free operating system
+unity desktop environment
+gnome desktop environment
+kde desktop environment
+xfce desktop environment
+ack
+make build system
+boost c++ libraries
+freetype library
+gtk+ library
+github
+nodejs
+iojs
+ecmascript 6
+es2015
+nginx
+apache
+openssl
+pkg-config
+python
+ruby
+nylas email client
+postgres
+gnucash
+amarok
+aqualung
+itunes
+ardour
+audacity
+wordpress
+mozilla thunderbird
+gimp
+vlc player
+inkscape
