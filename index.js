@@ -11,7 +11,7 @@ commander
   .option('-d, --dry-run', 'output what would have been searched, but don\'t actually search')
   .option('-f, --file [file]', 'file to get random searches from', `${__dirname}/search-list.txt`)
   .option('-g, --google [topic]', 'use Google News API to generate 10 things to search for')
-  .option('-n, --num [value]', 'number of queries to perform (not compatible with --google option)', '20')
+  .option('-n, --num [value]', 'number of queries to perform (not compatible with --google option)', '10')
   .option('-w, --wait [value]', 'milliseconds to wait between requests')
   .parse(process.argv)
 
