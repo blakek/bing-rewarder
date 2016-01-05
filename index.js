@@ -27,16 +27,21 @@ function getSearchArray(callback) {
   if (commander.google) {
     googleNewsApi.getResults(commander.google, (err, results) => {
       if (err) {
-        console.error('ERROR:', err)
+        console.error(err)
       } else {
-
+        callback(results)
       }
     })
   }
 }
 
-// if (commander.dryRun) {
-//   console.log(`Searching for ${searchText}`)
-// } else {
-//   exec(`open https://www.bing.com/search?q=${searchText}`)
-// }
+getSearchArray((searchTerms) => {
+  for (var term of searchTerms) {
+    if (commander.dryRun) {
+      console.log(`Searching for "${term}"`)
+    } else {
+      var searchText = cleanSearchItems(term)
+      exec(`open https://www.bing.com/search?q=${searchText}`)
+    }
+  }
+})
